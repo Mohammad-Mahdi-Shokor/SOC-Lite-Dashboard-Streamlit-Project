@@ -58,6 +58,9 @@ affectedScopeTemp = {
     "Network":["192.168.0.1"]
 }
 
+reporters = ["Mohammad Shokor","Hasan Sheet","0Day","guest"]
+severityKeys = ["Low", "Medium", "High", "Critical"]
+
 def ratingToSeverity(rating):
     if(rating<4):
         return "Low"
