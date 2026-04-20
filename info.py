@@ -57,3 +57,13 @@ affectedScopeTemp = {
     "IOS":["Scouts Guide IOS"],
     "Network":["192.168.0.1"]
 }
+
+def ratingToSeverity(rating):
+    if(rating<4):
+        return "Low"
+    elif(rating<7):
+        return "Medium"
+    elif(rating<9):
+        return "High"
+    else:
+        return "Critical"
