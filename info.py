@@ -1,3 +1,7 @@
+import pandas as pd
+import numpy as np
+import altair as alt
+from datetime import datetime, timedelta
 #Those are lists of types of vulnerabilites / attacks 
 owaspTopTen = [
     "Broken Access Control",
@@ -29,23 +33,22 @@ incidentTypes = [
     "Phishing",
     "Malware",
     "Ransomware",
-    "DDoS Attack",
-    "Brute Force Attack",
-    "SQL Injection",
-    "Cross-Site Scripting (XSS)",
-    "Unauthorized Access",
+    "DDoS",# short for distributed dinail of service
+    "Brute Force",
+    "SQLI",# short for SQL Injection
+    "XSS", # short for cross site scripting
+    "Unautho Access",
     "Data Breach",
-    "Privilege Escalation",
-    "Man-in-the-Middle (MITM)",
-    "Zero-Day Exploit",
+    "Priv Esc", # short for Privilege Escalation
+    "MITM", # short for man in the middle
+    "Zero-Days",
     "Insider Threat",
-    "System Compromise",
     "Network Intrusion",
-    "Credential Theft",
-    "Business Email Compromise",
-    "Supply Chain Attack",
-    "Configuration Error",
-    "Suspicious Login Activity"
+    "Creds Theft", # short for Credentials Theft
+    "Email Compromise",
+    "Supply Chain",
+    "Config Error",
+    "Sus Login Activity"# short for suspecious loging activity
 ]
 
 
@@ -61,6 +64,7 @@ affectedScopeTemp = {
 reporters = ["Mohammad Shokor","Hasan Sheet","0Day","guest"]
 severityKeys = ["Low", "Medium", "High", "Critical"]
 
+
 def ratingToSeverity(rating):
     if(rating<4):
         return "Low"
@@ -70,3 +74,23 @@ def ratingToSeverity(rating):
         return "High"
     else:
         return "Critical"
+    
+start = datetime(2025, 10, 27)
+end = datetime.now()
+reports = []
+for _ in range(150):
+    tempRating = round(np.random.uniform(0, 10), 1)
+    reports.append({
+            "name": reporters[np.random.randint(0, len(reporters))],
+            "title": "",
+            "type": incidentTypes[np.random.randint(0, len(incidentTypes))],
+            "rating": f"{tempRating:.1f}",
+            "severity": ratingToSeverity(tempRating),
+            "description": "",
+            "time":  (start + timedelta(seconds=np.random.randint(0, int((end - start).total_seconds())))).date(), # random date between 27 of october 2025 (the date I started bughunting) and today's date
+            "affectedTargets": np.random.choice(
+                affectedTargetsTypes,
+                size=np.random.randint(1, 4),
+                replace=False
+            ).tolist()
+    })

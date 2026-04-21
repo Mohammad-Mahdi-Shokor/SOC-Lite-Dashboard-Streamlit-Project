@@ -38,3 +38,4 @@ def reportPage():
         st.write(f"{text} reported successfully :)")
         st.write(f"The severity category is : {severity}")
         st.write(f"The severity type is : {type}")
+reportPage()
