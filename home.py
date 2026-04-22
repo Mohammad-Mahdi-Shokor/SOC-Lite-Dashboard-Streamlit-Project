@@ -1,6 +1,5 @@
 import streamlit as st 
 from PIL import Image
-from inputFormsPage import reportPage 
 # st.sidebar.title("Control Panel")
 
 # screen = st.sidebar.radio(

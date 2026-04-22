@@ -1,7 +1,72 @@
-import pandas as pd
-import numpy as np
-import altair as alt
-from datetime import datetime, timedelta
+import json
+from pathlib import Path
+from datetime import datetime
+
+reportsFile = Path(__file__).with_name("reports.json")
+reportersFile = Path(__file__).with_name("reporters.json")  # fixed typo
+
+def load_reports():
+    if reportsFile.exists():
+        with open(reportsFile, "r", encoding="utf-8") as f:
+            return json.load(f)
+    return []
+
+def save_reports(items):
+    with open(reportsFile, "w", encoding="utf-8") as f:
+        json.dump(items, f, ensure_ascii=False, indent=2)
+
+def load_reporters():
+    if reportersFile.exists():
+        with open(reportersFile, "r", encoding="utf-8") as f:
+            return json.load(f)
+    return []
+
+def save_reporters(items):
+    with open(reportersFile, "w", encoding="utf-8") as f:
+        json.dump(items, f, ensure_ascii=False, indent=2)
+
+def addReporter(name):
+    items = load_reporters()
+    if name not in items:
+        items.append({"name":name})
+        save_reporters(items)
+
+def addReport(
+    name,
+    title,
+    type,
+    rating,
+    severity,
+    description,
+    time,
+    affectedTargets=None,
+    affetecTargets=None,  # backward compatibility
+):
+    targets = affectedTargets if affectedTargets is not None else (affetecTargets or [])
+
+    new_report = {
+        "name": name,
+        "title": title,
+        "type": type,
+        "rating": rating,
+        "severity": severity,
+        "description": description,
+        "time": str(time),
+        "affectedTargets": targets,
+    }
+
+    items = load_reports()
+    items.append(new_report)
+    save_reports(items)
+    addReporter(name)
+
+
+rep = load_reporters()
+reporters = [item["name"] if isinstance(item, dict) else item for item in rep]
+reports=load_reports()
+start = datetime(2025, 10, 27)
+end = datetime.now()
+
 #Those are lists of types of vulnerabilites / attacks 
 owaspTopTen = [
     "Broken Access Control",
@@ -37,7 +102,7 @@ incidentTypes = [
     "Brute Force",
     "SQLI",# short for SQL Injection
     "XSS", # short for cross site scripting
-    "Unautho Access",
+    "Unauth Access",
     "Data Breach",
     "Priv Esc", # short for Privilege Escalation
     "MITM", # short for man in the middle
@@ -61,7 +126,6 @@ affectedScopeTemp = {
     "Network":["192.168.0.1"]
 }
 
-reporters = ["Mohammad Shokor","Hasan Sheet","0Day","guest"]
 severityKeys = ["Low", "Medium", "High", "Critical"]
 
 
@@ -77,20 +141,24 @@ def ratingToSeverity(rating):
     
 start = datetime(2025, 10, 27)
 end = datetime.now()
-reports = []
-for _ in range(150):
-    tempRating = round(np.random.uniform(0, 10), 1)
-    reports.append({
-            "name": reporters[np.random.randint(0, len(reporters))],
-            "title": "",
-            "type": incidentTypes[np.random.randint(0, len(incidentTypes))],
-            "rating": f"{tempRating:.1f}",
-            "severity": ratingToSeverity(tempRating),
-            "description": "",
-            "time":  (start + timedelta(seconds=np.random.randint(0, int((end - start).total_seconds())))).date(), # random date between 27 of october 2025 (the date I started bughunting) and today's date
-            "affectedTargets": np.random.choice(
-                affectedTargetsTypes,
-                size=np.random.randint(1, 4),
-                replace=False
-            ).tolist()
-    })
+# reports = []
+
+#how random reports are made : 
+# for _ in range(200):
+#     tempRating = round(np.random.uniform(0, 10), 1)
+#     reports.append({
+#             "name": reporters[np.random.randint(0, len(reporters))],
+#             "title": "",
+#             "type": incidentTypes[np.random.randint(0, len(incidentTypes))],
+#             "rating": f"{tempRating:.1f}",
+#             "severity": ratingToSeverity(tempRating),
+#             "description": "",
+#             "time":  (start + timedelta(seconds=np.random.randint(0, int((end - start).total_seconds())))).date(), # random date between 27 of october 2025 (the date I started bughunting) and today's date
+#             "affectedTargets": np.random.choice(
+#                 affectedTargetsTypes,
+#                 size=np.random.randint(1, 4),
+#                 replace=False
+#             ).tolist()
+#     })
+
+

@@ -5,7 +5,11 @@ import altair as alt
 from datetime import datetime, timedelta
 from info import severityKeys, reporters,reports
 
+
+
 # just to be clear, I love writing comments :)
+st.title("🛡️ SOC Lite Dashboard")
+st.subheader("View, Report & Analyse Cybersecurity Incidents.")
 
 start = datetime(2025, 10, 27)
 end = datetime.now()
@@ -66,7 +70,7 @@ pieChart = alt.Chart(pieData).mark_arc().encode(
 ).properties(width=280, height=280)
 
 col1, col2 = st.columns([2, 1])
-st.title("Incidents Dashboard")
+
 with col1:
     st.subheader("Reporters Stats")
     st.altair_chart(chart, use_container_width=True)

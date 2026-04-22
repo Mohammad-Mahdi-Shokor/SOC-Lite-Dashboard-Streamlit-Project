@@ -1,7 +1,15 @@
 import streamlit as st
 import pandas as pd
-from info import reports, incidentTypes
+from info import  incidentTypes
+from datetime import date
 import math
+import streamlit as st
+from info import incidentTypes ,reports
+
+def parse_report_date(value):
+    if isinstance(value, date):
+        return value
+    return date.fromisoformat(value)  # expects 'YYYY-MM-DD'
 
 header_divider = """
 <hr style="
@@ -30,29 +38,87 @@ severity_color_map = {
 }
 
 st.title("Incidents Reports")
-search = st.text_input("",placeholder="Search By Name")
-typeColumn,RatingColumn = st.columns(2)
+if "search" not in st.session_state:
+    st.session_state.search = ""
+
+
+st.text_input(
+    "Search by name",
+    placeholder="Search By Name",
+    label_visibility="collapsed",
+    key="search", # connect to session_state :)
+)
+typeColumn,RatingColumn,DateRange = st.columns([30,40,30])
+
+if "type" not in st.session_state:
+    st.session_state.type = []
 with typeColumn:
-    st.selectbox(
+    st.multiselect(
         "Select Type",
         incidentTypes,
-        index=None,
-        placeholder="type"
+        placeholder="type",
+        key="type"
     )
+   
+
+if "minRating" not in st.session_state:
+    st.session_state.minRating = 0.0
+if "maxRating" not in st.session_state:
+    st.session_state.maxRating = 10.0
+
 with RatingColumn:
     col1, col2 = st.columns([1, 1])
 
     with col1:
-        min_rating = st.number_input("Min rating", 0.0, 10.0, 0.0, 0.1)
+        min_rating = st.number_input(
+            "Min rating",
+            min_value=0.0,
+            max_value=10.0,
+            step=0.1,
+            format="%.1f",
+            key="minRating",
+        )
 
     with col2:
-        max_rating = st.number_input("Max rating", min_rating, 10.0, 10.0, 0.1)
+        max_rating = st.number_input(
+            "Max rating",
+            min_value=min_rating,
+            max_value=10.0,
+            step=0.1,
+            format="%.1f",
+            key="maxRating",
+        )
+if "dateRange" not in st.session_state:
+    st.session_state.dateRange = (date(2025, 10, 27), date.today())
+with DateRange:
+    picked = st.date_input(
+    "Select date range",
+    value=st.session_state.dateRange,
+    format="DD-MM-YYYY",)
+
+if isinstance(picked, (list, tuple)) and len(picked) == 2:
+    st.session_state.dateRange = (picked[0], picked[1])
+
+startDate, endDate = st.session_state.dateRange
 
 st.write("\n\n")
+searchReports = [
+    report
+    for report in reports
+    if st.session_state.search.lower() in report["name"].lower()
+    and (st.session_state.minRating <= float(report["rating"]) <= st.session_state.maxRating)
+    and (
+        report["type"] in st.session_state.type
+        or st.session_state.type == []
+    )
+    and startDate <= parse_report_date(report["time"]) <= endDate
+]
+
+
 titleCols = st.columns([24,23,10,15,30]) # the percentage of each column (I made 10% for rating and severity cause they are small text :} ) 
-rowsPerTable = 12
+rowsPerTable = 10
 cols = ["name","type","rating","time","affectedTargets"]
-numOfTables = math.ceil(len(reports) / rowsPerTable)
+numOfTables = math.ceil(len(searchReports) / rowsPerTable)
 
 if "tableNumber" not in st.session_state:
     st.session_state.tableNumber = 1
@@ -71,8 +137,7 @@ if "tableNumber" not in st.session_state:
 
 #             elif cols[i]=="rating":
 #                 severity = reports[b]["severity"]
-#                 rating_value = reports[b][cols[i]]
-#                 st.markdown(
+#                 rating_value = reports[b][cols[i]]                       
 #                     f'<span style="background:{severity_color_map.get(severity, "#9ca3af")};color:white;padding:4px 10px;border-radius:999px;font-size:12px;font-weight:600;">{rating_value}</span>',
 #                     unsafe_allow_html=True
 #                 )
@@ -90,8 +155,8 @@ for i in range(len(cols)):
     
 st.markdown(header_divider, unsafe_allow_html=True)
 
-for i in range((st.session_state.tableNumber - 1) * rowsPerTable, min((st.session_state.tableNumber) * rowsPerTable, len(reports))):
-    report = reports[i]
+for i in range((st.session_state.tableNumber - 1) * rowsPerTable, min((st.session_state.tableNumber) * rowsPerTable, len(searchReports))):
+    report = searchReports[i]
     contentCols = st.columns([24,23,10,15,30])
     for j in range(len(cols)):
         with contentCols[j]:
@@ -110,7 +175,7 @@ for i in range((st.session_state.tableNumber - 1) * rowsPerTable, min((st.sessio
             else:
                 st.write(report[cols[j]])
     
-    if(i <  min((st.session_state.tableNumber) * rowsPerTable, len(reports))-1):
+    if(i <  min((st.session_state.tableNumber) * rowsPerTable, len(searchReports))-1):
         st.markdown(row_divider, unsafe_allow_html=True)
 
 

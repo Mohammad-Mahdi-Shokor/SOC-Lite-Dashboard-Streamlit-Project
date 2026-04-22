@@ -1,41 +1,72 @@
+
 import streamlit as st
-from info import incidentTypes ,affectedScopeTemp,ratingToSeverity
+from info import incidentTypes, affectedTargetsTypes, ratingToSeverity, addReport
 
+@st.dialog("Thanks for reporting!")
+def submitAReport():
+    st.subheader("Your report has been added to the reports list :)")
 
-def reportPage():
-    st.title("🛡️ SOC Lite Dashboard")
-    st.subheader("View, Report & Analyse Cybersecurity Incidents.")
-    
-    guest = st.checkbox("Report as a guest")
+st.title("Report an Incident")
 
-    if  not guest:
-        name = st.text_input("Full Name:")
-    else:
-        name = "guest"
+if "isGuest" not in st.session_state:
+    st.session_state.isGuest = False
 
-    text = st.text_input("Write a report title")
-    rating = st.slider("What is the severity?",float(0.0),10.0,step=0.1)
-    severity = ratingToSeverity(rating)
+is_guest = st.checkbox("Report as a guest", key="isGuest")
 
+if isinstance(affectedTargetsTypes, dict):
+    affected_options = [item for values in affectedTargetsTypes.values() for item in values]
+else:
+    affected_options = affectedTargetsTypes
 
-    type = st.selectbox(
-        "What type of incident did you discover?",incidentTypes
+with st.form("Report an Incident"):
+    name = st.text_input(
+        "Full Name:",
+        placeholder="guest" if is_guest else "Enter your full name"
     )
+
+    title = st.text_input("Write a report title")
+    rating = st.slider("What is the severity?", 0.0, 10.0, step=0.1)
+    severity = ratingToSeverity(rating)
+    incident_type = st.selectbox("What type of incident did you discover?", incidentTypes)
+
     description = st.text_area(
         "Write a full explanation of the incident below:",
         max_chars=500,
         height=150,
         placeholder="Enter detailed description..."
     )
-    target = st.multiselect(
-        "Select affected scope", 
-        [ item for values in affectedScopeTemp.values() for item in values]
+
+    targets = st.multiselect("Select affected scope", affected_options)
+
+    found_date = st.date_input("Select the time where this issue was found")
+    uploaded_info = st.file_uploader(
+        "Upload images for clarification (optional)",
+        type=["png", "jpg", "jpeg"]
     )
 
-    datetime=st.date_input("Select the time where this issue was found")
-    uploaded_info = st.file_uploader("Upload images for clarification (optional)",type=["png","jpg","jpeg"])
-    if(st.button("Submit")):
-        st.write(f"{text} reported successfully :)")
-        st.write(f"The severity category is : {severity}")
-        st.write(f"The severity type is : {type}")
-reportPage()
+    submitted = st.form_submit_button("Submit")
+
+if submitted:
+    effective_name = "guest" if is_guest else name.strip()
+    if (not is_guest) and (len(effective_name) < 3):
+        st.error("Name should be at least 3 characters")
+    elif(len(title.strip())<3):
+        st.error("Title should be at least 3 characters")
+    elif  description.strip()=="":
+        st.error("Description is incorrect format")
+    elif   targets==[]:
+        st.error("Please select at least one affected target")
+    else:
+        addReport(
+    name="guest" if is_guest else name,
+    title=title,
+    type=incident_type,
+    rating=rating,
+    severity=severity,
+    description=description,
+    time=str(found_date),
+    affectedTargets=targets,
+)
+        st.success("Report submitted.")
+        submitAReport()
+

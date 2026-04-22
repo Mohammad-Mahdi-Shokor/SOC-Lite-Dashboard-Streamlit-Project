@@ -1,0 +1,1314 @@
+[
+  {
+    "name": "0Day",
+    "title": "",
+    "type": "Config Error",
+    "rating": "2.1",
+    "severity": "Low",
+    "description": "",
+    "time": "2025-11-09",
+    "affectedTargets": [
+      "Web",
+      "APK"
+    ]
+  },
+  {
+    "name": "0Day",
+    "title": "",
+    "type": "DDoS",
+    "rating": "5.5",
+    "severity": "Medium",
+    "description": "",
+    "time": "2026-03-18",
+    "affectedTargets": [
+      "Network",
+      "Web3",
+      "Web"
+    ]
+  },
+  {
+    "name": "Mohammad Shokor",
+    "title": "",
+    "type": "Insider Threat",
+    "rating": "0.0",
+    "severity": "Low",
+    "description": "",
+    "time": "2026-02-18",
+    "affectedTargets": [
+      "IOS"
+    ]
+  },
+  {
+    "name": "guest",
+    "title": "",
+    "type": "SQLI",
+    "rating": "0.3",
+    "severity": "Low",
+    "description": "",
+    "time": "2025-11-10",
+    "affectedTargets": [
+      "IOS",
+      "Web",
+      "API"
+    ]
+  },
+  {
+    "name": "0Day",
+    "title": "",
+    "type": "Creds Theft",
+    "rating": "0.3",
+    "severity": "Low",
+    "description": "",
+    "time": "2025-12-31",
+    "affectedTargets": [
+      "API",
+      "Web3",
+      "Web"
+    ]
+  },
+  {
+    "name": "Hasan Sheet",
+    "title": "",
+    "type": "SQLI",
+    "rating": "9.1",
+    "severity": "Critical",
+    "description": "",
+    "time": "2026-04-21",
+    "affectedTargets": [
+      "IOS",
+      "API"
+    ]
+  },
+  {
+    "name": "guest",
+    "title": "",
+    "type": "Ransomware",
+    "rating": "4.8",
+    "severity": "Medium",
+    "description": "",
+    "time": "2026-02-01",
+    "affectedTargets": [
+      "APK"
+    ]
+  },
+  {
+    "name": "0Day",
+    "title": "",
+    "type": "Config Error",
+    "rating": "9.5",
+    "severity": "Critical",
+    "description": "",
+    "time": "2026-04-15",
+    "affectedTargets": [
+      "Web3",
+      "Web"
+    ]
+  },
+  {
+    "name": "guest",
+    "title": "",
+    "type": "Unauth Access",
+    "rating": "8.2",
+    "severity": "High",
+    "description": "",
+    "time": "2025-12-20",
+    "affectedTargets": [
+      "Web",
+      "APK"
+    ]
+  },
+  {
+    "name": "0Day",
+    "title": "",
+    "type": "Priv Esc",
+    "rating": "8.5",
+    "severity": "High",
+    "description": "",
+    "time": "2026-01-28",
+    "affectedTargets": [
+      "API",
+      "Network"
+    ]
+  },
+  {
+    "name": "Hasan Sheet",
+    "title": "",
+    "type": "Zero-Days",
+    "rating": "0.5",
+    "severity": "Low",
+    "description": "",
+    "time": "2026-01-10",
+    "affectedTargets": [
+      "IOS",
+      "Web3"
+    ]
+  },
+  {
+    "name": "Hasan Sheet",
+    "title": "",
+    "type": "Phishing",
+    "rating": "8.9",
+    "severity": "High",
+    "description": "",
+    "time": "2025-11-09",
+    "affectedTargets": [
+      "Web"
+    ]
+  },
+  {
+    "name": "0Day",
+    "title": "",
+    "type": "DDoS",
+    "rating": "0.0",
+    "severity": "Low",
+    "description": "",
+    "time": "2026-01-03",
+    "affectedTargets": [
+      "Web3",
+      "Network",
+      "IOS"
+    ]
+  },
+  {
+    "name": "Mohammad Shokor",
+    "title": "",
+    "type": "Ransomware",
+    "rating": "0.7",
+    "severity": "Low",
+    "description": "",
+    "time": "2025-11-27",
+    "affectedTargets": [
+      "Network"
+    ]
+  },
+  {
+    "name": "guest",
+    "title": "",
+    "type": "Config Error",
+    "rating": "5.8",
+    "severity": "Medium",
+    "description": "",
+    "time": "2026-02-26",
+    "affectedTargets": [
+      "Web"
+    ]
+  },
+  {
+    "name": "guest",
+    "title": "",
+    "type": "Priv Esc",
+    "rating": "9.1",
+    "severity": "Critical",
+    "description": "",
+    "time": "2026-02-11",
+    "affectedTargets": [
+      "APK"
+    ]
+  },
+  {
+    "name": "Hasan Sheet",
+    "title": "",
+    "type": "Ransomware",
+    "rating": "1.7",
+    "severity": "Low",
+    "description": "",
+    "time": "2025-11-15",
+    "affectedTargets": [
+      "API",
+      "Web",
+      "APK"
+    ]
+  },
+  {
+    "name": "0Day",
+    "title": "",
+    "type": "DDoS",
+    "rating": "7.0",
+    "severity": "High",
+    "description": "",
+    "time": "2025-12-12",
+    "affectedTargets": [
+      "API",
+      "APK"
+    ]
+  },
+  {
+    "name": "guest",
+    "title": "",
+    "type": "XSS",
+    "rating": "3.7",
+    "severity": "Low",
+    "description": "",
+    "time": "2026-03-27",
+    "affectedTargets": [
+      "Web3",
+      "APK"
+    ]
+  },
+  {
+    "name": "Hasan Sheet",
+    "title": "",
+    "type": "Zero-Days",
+    "rating": "2.6",
+    "severity": "Low",
+    "description": "",
+    "time": "2025-11-15",
+    "affectedTargets": [
+      "Web3",
+      "IOS"
+    ]
+  },
+  {
+    "name": "0Day",
+    "title": "",
+    "type": "Config Error",
+    "rating": "5.2",
+    "severity": "Medium",
+    "description": "",
+    "time": "2026-01-31",
+    "affectedTargets": [
+      "APK",
+      "Web",
+      "IOS"
+    ]
+  },
+  {
+    "name": "Hasan Sheet",
+    "title": "",
+    "type": "Config Error",
+    "rating": "3.7",
+    "severity": "Low",
+    "description": "",
+    "time": "2026-04-09",
+    "affectedTargets": [
+      "Web",
+      "Network"
+    ]
+  },
+  {
+    "name": "0Day",
+    "title": "",
+    "type": "Priv Esc",
+    "rating": "1.9",
+    "severity": "Low",
+    "description": "",
+    "time": "2025-12-12",
+    "affectedTargets": [
+      "Network",
+      "Web3"
+    ]
+  },
+  {
+    "name": "0Day",
+    "title": "",
+    "type": "MITM",
+    "rating": "1.8",
+    "severity": "Low",
+    "description": "",
+    "time": "2025-12-05",
+    "affectedTargets": [
+      "Web"
+    ]
+  },
+  {
+    "name": "Hasan Sheet",
+    "title": "",
+    "type": "Priv Esc",
+    "rating": "9.3",
+    "severity": "Critical",
+    "description": "",
+    "time": "2026-03-04",
+    "affectedTargets": [
+      "Network",
+      "API"
+    ]
+  },
+  {
+    "name": "Mohammad Shokor",
+    "title": "",
+    "type": "Data Breach",
+    "rating": "3.4",
+    "severity": "Low",
+    "description": "",
+    "time": "2025-12-06",
+    "affectedTargets": [
+      "Web"
+    ]
+  },
+  {
+    "name": "0Day",
+    "title": "",
+    "type": "Creds Theft",
+    "rating": "8.2",
+    "severity": "High",
+    "description": "",
+    "time": "2025-12-12",
+    "affectedTargets": [
+      "APK",
+      "Web"
+    ]
+  },
+  {
+    "name": "guest",
+    "title": "",
+    "type": "Insider Threat",
+    "rating": "8.7",
+    "severity": "High",
+    "description": "",
+    "time": "2026-01-02",
+    "affectedTargets": [
+      "APK"
+    ]
+  },
+  {
+    "name": "0Day",
+    "title": "",
+    "type": "Email Compromise",
+    "rating": "2.6",
+    "severity": "Low",
+    "description": "",
+    "time": "2026-02-08",
+    "affectedTargets": [
+      "Web3"
+    ]
+  },
+  {
+    "name": "Mohammad Shokor",
+    "title": "",
+    "type": "Phishing",
+    "rating": "1.2",
+    "severity": "Low",
+    "description": "",
+    "time": "2025-11-15",
+    "affectedTargets": [
+      "API",
+      "Network"
+    ]
+  },
+  {
+    "name": "guest",
+    "title": "",
+    "type": "Zero-Days",
+    "rating": "9.2",
+    "severity": "Critical",
+    "description": "",
+    "time": "2026-02-20",
+    "affectedTargets": [
+      "Network"
+    ]
+  },
+  {
+    "name": "0Day",
+    "title": "",
+    "type": "Priv Esc",
+    "rating": "9.8",
+    "severity": "Critical",
+    "description": "",
+    "time": "2026-03-29",
+    "affectedTargets": [
+      "API",
+      "Web"
+    ]
+  },
+  {
+    "name": "guest",
+    "title": "",
+    "type": "Malware",
+    "rating": "9.3",
+    "severity": "Critical",
+    "description": "",
+    "time": "2026-01-06",
+    "affectedTargets": [
+      "API",
+      "IOS",
+      "APK"
+    ]
+  },
+  {
+    "name": "Hasan Sheet",
+    "title": "",
+    "type": "Ransomware",
+    "rating": "6.0",
+    "severity": "Medium",
+    "description": "",
+    "time": "2025-11-06",
+    "affectedTargets": [
+      "Web",
+      "Web3"
+    ]
+  },
+  {
+    "name": "0Day",
+    "title": "",
+    "type": "Zero-Days",
+    "rating": "4.8",
+    "severity": "Medium",
+    "description": "",
+    "time": "2025-11-06",
+    "affectedTargets": [
+      "Network"
+    ]
+  },
+  {
+    "name": "guest",
+    "title": "",
+    "type": "Priv Esc",
+    "rating": "0.9",
+    "severity": "Low",
+    "description": "",
+    "time": "2026-02-13",
+    "affectedTargets": [
+      "Network",
+      "API",
+      "IOS"
+    ]
+  },
+  {
+    "name": "Hasan Sheet",
+    "title": "",
+    "type": "Phishing",
+    "rating": "7.2",
+    "severity": "High",
+    "description": "",
+    "time": "2026-01-19",
+    "affectedTargets": [
+      "Network",
+      "API",
+      "APK"
+    ]
+  },
+  {
+    "name": "0Day",
+    "title": "",
+    "type": "Priv Esc",
+    "rating": "4.1",
+    "severity": "Medium",
+    "description": "",
+    "time": "2025-11-29",
+    "affectedTargets": [
+      "API",
+      "APK",
+      "IOS"
+    ]
+  },
+  {
+    "name": "guest",
+    "title": "",
+    "type": "Insider Threat",
+    "rating": "6.3",
+    "severity": "Medium",
+    "description": "",
+    "time": "2026-02-26",
+    "affectedTargets": [
+      "Network",
+      "Web3",
+      "APK"
+    ]
+  },
+  {
+    "name": "0Day",
+    "title": "",
+    "type": "MITM",
+    "rating": "5.6",
+    "severity": "Medium",
+    "description": "",
+    "time": "2026-03-22",
+    "affectedTargets": [
+      "IOS",
+      "Web"
+    ]
+  },
+  {
+    "name": "guest",
+    "title": "",
+    "type": "Unauth Access",
+    "rating": "5.6",
+    "severity": "Medium",
+    "description": "",
+    "time": "2026-01-25",
+    "affectedTargets": [
+      "Network"
+    ]
+  },
+  {
+    "name": "guest",
+    "title": "",
+    "type": "MITM",
+    "rating": "8.4",
+    "severity": "High",
+    "description": "",
+    "time": "2026-03-03",
+    "affectedTargets": [
+      "Network"
+    ]
+  },
+  {
+    "name": "Mohammad Shokor",
+    "title": "",
+    "type": "Phishing",
+    "rating": "3.8",
+    "severity": "Low",
+    "description": "",
+    "time": "2026-02-26",
+    "affectedTargets": [
+      "APK",
+      "Web3",
+      "API"
+    ]
+  },
+  {
+    "name": "guest",
+    "title": "",
+    "type": "MITM",
+    "rating": "0.1",
+    "severity": "Low",
+    "description": "",
+    "time": "2025-11-25",
+    "affectedTargets": [
+      "Web"
+    ]
+  },
+  {
+    "name": "0Day",
+    "title": "",
+    "type": "Supply Chain",
+    "rating": "2.4",
+    "severity": "Low",
+    "description": "",
+    "time": "2025-12-15",
+    "affectedTargets": [
+      "Web3",
+      "IOS"
+    ]
+  },
+  {
+    "name": "Mohammad Shokor",
+    "title": "",
+    "type": "Supply Chain",
+    "rating": "0.9",
+    "severity": "Low",
+    "description": "",
+    "time": "2025-12-23",
+    "affectedTargets": [
+      "Network",
+      "Web3"
+    ]
+  },
+  {
+    "name": "Mohammad Shokor",
+    "title": "",
+    "type": "Data Breach",
+    "rating": "6.7",
+    "severity": "Medium",
+    "description": "",
+    "time": "2026-03-11",
+    "affectedTargets": [
+      "Web3",
+      "Web",
+      "APK"
+    ]
+  },
+  {
+    "name": "Mohammad Shokor",
+    "title": "",
+    "type": "XSS",
+    "rating": "5.9",
+    "severity": "Medium",
+    "description": "",
+    "time": "2026-01-01",
+    "affectedTargets": [
+      "APK",
+      "Web3",
+      "Network"
+    ]
+  },
+  {
+    "name": "Mohammad Shokor",
+    "title": "",
+    "type": "MITM",
+    "rating": "7.5",
+    "severity": "High",
+    "description": "",
+    "time": "2026-04-06",
+    "affectedTargets": [
+      "Web3"
+    ]
+  },
+  {
+    "name": "Hasan Sheet",
+    "title": "",
+    "type": "MITM",
+    "rating": "4.9",
+    "severity": "Medium",
+    "description": "",
+    "time": "2026-03-07",
+    "affectedTargets": [
+      "APK",
+      "IOS"
+    ]
+  },
+  {
+    "name": "guest",
+    "title": "",
+    "type": "Creds Theft",
+    "rating": "9.5",
+    "severity": "Critical",
+    "description": "",
+    "time": "2026-04-19",
+    "affectedTargets": [
+      "IOS",
+      "APK",
+      "API"
+    ]
+  },
+  {
+    "name": "0Day",
+    "title": "",
+    "type": "Network Intrusion",
+    "rating": "6.9",
+    "severity": "Medium",
+    "description": "",
+    "time": "2026-02-15",
+    "affectedTargets": [
+      "Web"
+    ]
+  },
+  {
+    "name": "Hasan Sheet",
+    "title": "",
+    "type": "Creds Theft",
+    "rating": "2.5",
+    "severity": "Low",
+    "description": "",
+    "time": "2026-03-23",
+    "affectedTargets": [
+      "Web3",
+      "APK"
+    ]
+  },
+  {
+    "name": "Hasan Sheet",
+    "title": "",
+    "type": "Supply Chain",
+    "rating": "4.9",
+    "severity": "Medium",
+    "description": "",
+    "time": "2026-04-18",
+    "affectedTargets": [
+      "API",
+      "Network",
+      "IOS"
+    ]
+  },
+  {
+    "name": "Mohammad Shokor",
+    "title": "",
+    "type": "Priv Esc",
+    "rating": "1.2",
+    "severity": "Low",
+    "description": "",
+    "time": "2025-11-13",
+    "affectedTargets": [
+      "Network",
+      "API"
+    ]
+  },
+  {
+    "name": "0Day",
+    "title": "",
+    "type": "Zero-Days",
+    "rating": "9.2",
+    "severity": "Critical",
+    "description": "",
+    "time": "2025-11-10",
+    "affectedTargets": [
+      "IOS"
+    ]
+  },
+  {
+    "name": "0Day",
+    "title": "",
+    "type": "XSS",
+    "rating": "0.1",
+    "severity": "Low",
+    "description": "",
+    "time": "2026-02-22",
+    "affectedTargets": [
+      "IOS",
+      "API",
+      "Web3"
+    ]
+  },
+  {
+    "name": "Hasan Sheet",
+    "title": "",
+    "type": "DDoS",
+    "rating": "0.7",
+    "severity": "Low",
+    "description": "",
+    "time": "2025-12-03",
+    "affectedTargets": [
+      "API"
+    ]
+  },
+  {
+    "name": "guest",
+    "title": "",
+    "type": "Data Breach",
+    "rating": "3.4",
+    "severity": "Low",
+    "description": "",
+    "time": "2026-02-15",
+    "affectedTargets": [
+      "Web",
+      "API"
+    ]
+  },
+  {
+    "name": "0Day",
+    "title": "",
+    "type": "Zero-Days",
+    "rating": "1.7",
+    "severity": "Low",
+    "description": "",
+    "time": "2026-04-01",
+    "affectedTargets": [
+      "APK",
+      "IOS",
+      "Web3"
+    ]
+  },
+  {
+    "name": "guest",
+    "title": "",
+    "type": "Sus Login Activity",
+    "rating": "7.7",
+    "severity": "High",
+    "description": "",
+    "time": "2026-03-26",
+    "affectedTargets": [
+      "Web3",
+      "Web",
+      "API"
+    ]
+  },
+  {
+    "name": "guest",
+    "title": "",
+    "type": "Priv Esc",
+    "rating": "6.8",
+    "severity": "Medium",
+    "description": "",
+    "time": "2026-01-10",
+    "affectedTargets": [
+      "IOS",
+      "APK"
+    ]
+  },
+  {
+    "name": "guest",
+    "title": "",
+    "type": "Sus Login Activity",
+    "rating": "7.1",
+    "severity": "High",
+    "description": "",
+    "time": "2025-10-31",
+    "affectedTargets": [
+      "APK",
+      "Web"
+    ]
+  },
+  {
+    "name": "guest",
+    "title": "",
+    "type": "Config Error",
+    "rating": "4.6",
+    "severity": "Medium",
+    "description": "",
+    "time": "2025-12-13",
+    "affectedTargets": [
+      "APK",
+      "Web"
+    ]
+  },
+  {
+    "name": "guest",
+    "title": "",
+    "type": "Phishing",
+    "rating": "4.6",
+    "severity": "Medium",
+    "description": "",
+    "time": "2025-12-04",
+    "affectedTargets": [
+      "Network",
+      "Web",
+      "Web3"
+    ]
+  },
+  {
+    "name": "0Day",
+    "title": "",
+    "type": "Sus Login Activity",
+    "rating": "5.1",
+    "severity": "Medium",
+    "description": "",
+    "time": "2026-01-31",
+    "affectedTargets": [
+      "Network",
+      "API",
+      "APK"
+    ]
+  },
+  {
+    "name": "Hasan Sheet",
+    "title": "",
+    "type": "Email Compromise",
+    "rating": "4.9",
+    "severity": "Medium",
+    "description": "",
+    "time": "2025-11-11",
+    "affectedTargets": [
+      "IOS",
+      "API"
+    ]
+  },
+  {
+    "name": "guest",
+    "title": "",
+    "type": "Email Compromise",
+    "rating": "8.7",
+    "severity": "High",
+    "description": "",
+    "time": "2026-03-09",
+    "affectedTargets": [
+      "API"
+    ]
+  },
+  {
+    "name": "Mohammad Shokor",
+    "title": "",
+    "type": "Insider Threat",
+    "rating": "6.6",
+    "severity": "Medium",
+    "description": "",
+    "time": "2025-11-23",
+    "affectedTargets": [
+      "API"
+    ]
+  },
+  {
+    "name": "guest",
+    "title": "",
+    "type": "XSS",
+    "rating": "2.1",
+    "severity": "Low",
+    "description": "",
+    "time": "2026-01-13",
+    "affectedTargets": [
+      "API"
+    ]
+  },
+  {
+    "name": "Hasan Sheet",
+    "title": "",
+    "type": "Malware",
+    "rating": "6.1",
+    "severity": "Medium",
+    "description": "",
+    "time": "2025-11-20",
+    "affectedTargets": [
+      "Web",
+      "Web3"
+    ]
+  },
+  {
+    "name": "Mohammad Shokor",
+    "title": "",
+    "type": "Malware",
+    "rating": "9.4",
+    "severity": "Critical",
+    "description": "",
+    "time": "2025-12-17",
+    "affectedTargets": [
+      "Network",
+      "Web3"
+    ]
+  },
+  {
+    "name": "guest",
+    "title": "",
+    "type": "XSS",
+    "rating": "4.7",
+    "severity": "Medium",
+    "description": "",
+    "time": "2025-12-21",
+    "affectedTargets": [
+      "Network",
+      "Web",
+      "IOS"
+    ]
+  },
+  {
+    "name": "0Day",
+    "title": "",
+    "type": "Priv Esc",
+    "rating": "0.8",
+    "severity": "Low",
+    "description": "",
+    "time": "2026-04-11",
+    "affectedTargets": [
+      "Web3",
+      "APK"
+    ]
+  },
+  {
+    "name": "Mohammad Shokor",
+    "title": "",
+    "type": "Malware",
+    "rating": "7.4",
+    "severity": "High",
+    "description": "",
+    "time": "2025-12-18",
+    "affectedTargets": [
+      "Web3",
+      "Web",
+      "IOS"
+    ]
+  },
+  {
+    "name": "guest",
+    "title": "",
+    "type": "Brute Force",
+    "rating": "1.5",
+    "severity": "Low",
+    "description": "",
+    "time": "2026-04-21",
+    "affectedTargets": [
+      "API"
+    ]
+  },
+  {
+    "name": "Mohammad Shokor",
+    "title": "",
+    "type": "Email Compromise",
+    "rating": "9.8",
+    "severity": "Critical",
+    "description": "",
+    "time": "2026-01-08",
+    "affectedTargets": [
+      "API"
+    ]
+  },
+  {
+    "name": "Hasan Sheet",
+    "title": "",
+    "type": "Phishing",
+    "rating": "5.2",
+    "severity": "Medium",
+    "description": "",
+    "time": "2026-03-11",
+    "affectedTargets": [
+      "IOS",
+      "API"
+    ]
+  },
+  {
+    "name": "guest",
+    "title": "",
+    "type": "Zero-Days",
+    "rating": "4.6",
+    "severity": "Medium",
+    "description": "",
+    "time": "2025-12-27",
+    "affectedTargets": [
+      "APK",
+      "Web3",
+      "Web"
+    ]
+  },
+  {
+    "name": "Mohammad Shokor",
+    "title": "",
+    "type": "Network Intrusion",
+    "rating": "9.3",
+    "severity": "Critical",
+    "description": "",
+    "time": "2026-04-14",
+    "affectedTargets": [
+      "Web"
+    ]
+  },
+  {
+    "name": "Mohammad Shokor",
+    "title": "",
+    "type": "Email Compromise",
+    "rating": "5.1",
+    "severity": "Medium",
+    "description": "",
+    "time": "2026-02-23",
+    "affectedTargets": [
+      "Web3",
+      "API",
+      "Network"
+    ]
+  },
+  {
+    "name": "guest",
+    "title": "",
+    "type": "Ransomware",
+    "rating": "8.1",
+    "severity": "High",
+    "description": "",
+    "time": "2026-03-22",
+    "affectedTargets": [
+      "APK",
+      "API"
+    ]
+  },
+  {
+    "name": "guest",
+    "title": "",
+    "type": "DDoS",
+    "rating": "4.6",
+    "severity": "Medium",
+    "description": "",
+    "time": "2025-11-03",
+    "affectedTargets": [
+      "Network"
+    ]
+  },
+  {
+    "name": "Mohammad Shokor",
+    "title": "",
+    "type": "Creds Theft",
+    "rating": "8.7",
+    "severity": "High",
+    "description": "",
+    "time": "2026-03-05",
+    "affectedTargets": [
+      "Web3"
+    ]
+  },
+  {
+    "name": "0Day",
+    "title": "",
+    "type": "SQLI",
+    "rating": "5.1",
+    "severity": "Medium",
+    "description": "",
+    "time": "2026-03-22",
+    "affectedTargets": [
+      "Web3",
+      "IOS"
+    ]
+  },
+  {
+    "name": "Hasan Sheet",
+    "title": "",
+    "type": "MITM",
+    "rating": "0.1",
+    "severity": "Low",
+    "description": "",
+    "time": "2025-11-21",
+    "affectedTargets": [
+      "Web3",
+      "APK",
+      "Network"
+    ]
+  },
+  {
+    "name": "guest",
+    "title": "",
+    "type": "Sus Login Activity",
+    "rating": "7.2",
+    "severity": "High",
+    "description": "",
+    "time": "2025-11-09",
+    "affectedTargets": [
+      "Web3",
+      "Network",
+      "Web"
+    ]
+  },
+  {
+    "name": "Mohammad Shokor",
+    "title": "",
+    "type": "Network Intrusion",
+    "rating": "3.2",
+    "severity": "Low",
+    "description": "",
+    "time": "2026-03-15",
+    "affectedTargets": [
+      "APK",
+      "API",
+      "Web3"
+    ]
+  },
+  {
+    "name": "Mohammad Shokor",
+    "title": "",
+    "type": "Insider Threat",
+    "rating": "0.3",
+    "severity": "Low",
+    "description": "",
+    "time": "2026-03-21",
+    "affectedTargets": [
+      "APK"
+    ]
+  },
+  {
+    "name": "Hasan Sheet",
+    "title": "",
+    "type": "Creds Theft",
+    "rating": "5.2",
+    "severity": "Medium",
+    "description": "",
+    "time": "2026-02-23",
+    "affectedTargets": [
+      "API"
+    ]
+  },
+  {
+    "name": "0Day",
+    "title": "",
+    "type": "Brute Force",
+    "rating": "4.8",
+    "severity": "Medium",
+    "description": "",
+    "time": "2025-12-09",
+    "affectedTargets": [
+      "Web3",
+      "APK",
+      "API"
+    ]
+  },
+  {
+    "name": "guest",
+    "title": "",
+    "type": "Priv Esc",
+    "rating": "1.8",
+    "severity": "Low",
+    "description": "",
+    "time": "2026-04-14",
+    "affectedTargets": [
+      "Web3",
+      "API",
+      "APK"
+    ]
+  },
+  {
+    "name": "Mohammad Shokor",
+    "title": "",
+    "type": "Phishing",
+    "rating": "4.4",
+    "severity": "Medium",
+    "description": "",
+    "time": "2026-01-11",
+    "affectedTargets": [
+      "Web"
+    ]
+  },
+  {
+    "name": "Hasan Sheet",
+    "title": "",
+    "type": "MITM",
+    "rating": "4.1",
+    "severity": "Medium",
+    "description": "",
+    "time": "2026-01-18",
+    "affectedTargets": [
+      "APK",
+      "API"
+    ]
+  },
+  {
+    "name": "Mohammad Shokor",
+    "title": "",
+    "type": "Malware",
+    "rating": "0.1",
+    "severity": "Low",
+    "description": "",
+    "time": "2026-01-22",
+    "affectedTargets": [
+      "APK",
+      "IOS"
+    ]
+  },
+  {
+    "name": "Mohammad Shokor",
+    "title": "",
+    "type": "MITM",
+    "rating": "2.9",
+    "severity": "Low",
+    "description": "",
+    "time": "2025-12-24",
+    "affectedTargets": [
+      "Web3",
+      "Network"
+    ]
+  },
+  {
+    "name": "Mohammad Shokor",
+    "title": "",
+    "type": "SQLI",
+    "rating": "9.7",
+    "severity": "Critical",
+    "description": "",
+    "time": "2025-11-27",
+    "affectedTargets": [
+      "Web",
+      "APK",
+      "API"
+    ]
+  },
+  {
+    "name": "guest",
+    "title": "",
+    "type": "Priv Esc",
+    "rating": "7.5",
+    "severity": "High",
+    "description": "",
+    "time": "2025-11-11",
+    "affectedTargets": [
+      "Network",
+      "IOS",
+      "Web"
+    ]
+  },
+  {
+    "name": "guest",
+    "title": "",
+    "type": "XSS",
+    "rating": "2.0",
+    "severity": "Low",
+    "description": "",
+    "time": "2025-12-18",
+    "affectedTargets": [
+      "APK"
+    ]
+  },
+  {
+    "name": "guest",
+    "title": "",
+    "type": "Unauth Access",
+    "rating": "8.1",
+    "severity": "High",
+    "description": "",
+    "time": "2026-03-29",
+    "affectedTargets": [
+      "API"
+    ]
+  },
+  {
+    "name": "abc",
+    "title": "abc",
+    "type": "Phishing",
+    "rating": 0.0,
+    "severity": "Low",
+    "description": "ab",
+    "time": "2026-04-22",
+    "affectedTargets": [
+      "APK"
+    ]
+  }
+]
