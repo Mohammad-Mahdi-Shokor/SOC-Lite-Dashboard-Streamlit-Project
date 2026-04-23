@@ -141,6 +141,8 @@ def ratingToSeverity(rating):
     
 start = datetime(2025, 10, 27)
 end = datetime.now()
+
+#generate reports randomly
 # reports = []
 
 #how random reports are made : 

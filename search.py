@@ -4,7 +4,7 @@ from info import  incidentTypes
 from datetime import date
 import math
 import streamlit as st
-from info import incidentTypes ,reports
+from info import incidentTypes, load_reports,load_reporters
 
 def parse_report_date(value):
     if isinstance(value, date):
@@ -102,6 +102,7 @@ if isinstance(picked, (list, tuple)) and len(picked) == 2:
 startDate, endDate = st.session_state.dateRange
 
 st.write("\n\n")
+reports = load_reports()
 searchReports = [
     report
     for report in reports

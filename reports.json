@@ -1298,18 +1298,5 @@
     "affectedTargets": [
       "API"
     ]
-  },
-  {
-    "name": "abc",
-    "title": "abc",
-    "type": "Phishing",
-    "rating": 0.0,
-    "severity": "Low",
-    "description": "abc",
-    "time": "2026-04-22",
-    "affectedTargets": [
-      "Network",
-      "IOS"
-    ]
   }
 ]

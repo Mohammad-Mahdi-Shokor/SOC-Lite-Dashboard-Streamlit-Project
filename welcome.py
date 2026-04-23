@@ -1,0 +1,29 @@
+import streamlit as st
+
+st.title("🧭 Welcome to SOC Lite")
+st.subheader("A simple incident reporting and analysis workspace")
+
+st.markdown(
+    """
+SOC Lite helps security teams and bug bounty researchers track incidents from discovery to review.
+Use it to submit reports quickly, search and filter existing findings, and monitor severity trends over time.
+"""
+)
+
+st.markdown("### What you can do")
+st.markdown(
+    """
+- **Report incidents** with title, type, severity score, affected targets, and details.
+- **Search reports** by reporter name, incident type, rating range, and date range.
+- **Analyze trends** in the dashboard using charts for severity distribution and activity over time.
+"""
+)
+
+st.markdown("### Quick workflow")
+st.markdown(
+    """
+1. Open **Report An Incident** to submit a new finding.
+2. Use **Search** to review and filter reports.
+3. Visit **Dashboard** to monitor incident patterns and severity insights.
+"""
+)

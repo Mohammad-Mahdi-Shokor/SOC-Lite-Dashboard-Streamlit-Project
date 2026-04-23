@@ -3,10 +3,10 @@ import pandas as pd
 import numpy as np
 import altair as alt
 from datetime import datetime, timedelta
-from info import severityKeys, reporters,reports
+from info import severityKeys, reporters,load_reports,load_reporters
 
 
-
+reports = load_reporters()
 # just to be clear, I love writing comments :)
 st.title("🛡️ SOC Lite Dashboard")
 st.subheader("View, Report & Analyse Cybersecurity Incidents.")
