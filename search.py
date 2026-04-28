@@ -1,5 +1,4 @@
 import streamlit as st
-import pandas as pd
 from datetime import date
 import math
 from info import incidentTypes, loadReports
@@ -93,7 +92,7 @@ def renderFilters():
         st.session_state.dateRange = (picked[0], picked[1])
 
 
-def render_table_header(cols):
+def renderTableHeaders(cols):
     titleCols = st.columns([23, 23, 10, 15, 29]) # the percentage of each column (I made 10% for rating and 15% for time cause they are small text :} ) 
     
 
@@ -103,7 +102,7 @@ def render_table_header(cols):
     st.markdown(header_divider, unsafe_allow_html=True)
 
 
-def render_report_row(report, cols):
+def renderReportRow(report, cols):
     contentCols = st.columns([24, 23, 10, 15, 30])
     for j in range(len(cols)):
         with contentCols[j]:
@@ -128,7 +127,7 @@ def renderReportsTable(searchReports):
     cols = ["name", "type", "rating", "time", "affectedTargets"]
     numOfTables = math.ceil(len(searchReports) / rowsPerTable)
 
-    render_table_header(cols)
+    renderTableHeaders(cols)
 
     #shape one : each column has a divider under it 
     # for i in range(len(cols)):
@@ -161,7 +160,7 @@ def renderReportsTable(searchReports):
 
     for i in range(start_index, end_index):
         report = searchReports[i]
-        render_report_row(report, cols)
+        renderReportRow(report, cols)
 
         if i < end_index - 1:
             st.markdown(row_divider, unsafe_allow_html=True)
@@ -216,8 +215,9 @@ st.title("Incidents Reports")
 init_state()
 renderFilters()
 
+
 st.write("\n\n")
-searchReports = loadReports()
+searchReports = loadFilteredReports()
 numOfTables = renderReportsTable(searchReports)
 
 renderPageNumber(numOfTables)
